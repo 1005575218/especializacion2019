@@ -1,10 +1,8 @@
 package edu.cecar.controladores;
 
-import android.os.AsyncTask;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,7 +12,6 @@ public class MainActivity extends AppCompatActivity {
     private TextInputEditText teSexo;
     private TextInputEditText teCategoria;
 
-    // String url = "http://scienti.colciencias.gov.co:8081/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000733180";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

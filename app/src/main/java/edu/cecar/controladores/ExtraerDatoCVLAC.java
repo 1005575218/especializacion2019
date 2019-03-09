@@ -7,6 +7,8 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 
 public class ExtraerDatoCVLAC {
+    private ExtraerDatoCVLAC() {
+    }
 
     public static Investigador  getDatos(String url) {
 
@@ -19,6 +21,7 @@ public class ExtraerDatoCVLAC {
 
             Element tablas = documentoHTML.select("table").get(1); //Se obtiene la segunda tabla
             Elements filasTabla = tablas.select("tr"); // Se obtienen las filas de la tabla
+
 
             int filaNombre = 0;
             int filaNacionalidad = 2;
@@ -35,6 +38,8 @@ public class ExtraerDatoCVLAC {
             String nombre = filasTabla.get(filaNombre).select("td").get(1).text();
             String nacionalidad = filasTabla.get(filaNacionalidad).select("td").get(1).text();
             String sexo = filasTabla.get(filaSexo).select("td").get(1).text();
+            //String linea = filasTabla.get(0)
+
 
             //Se crea el objeto investigador
             investigador = new Investigador(nombre, nacionalidad,sexo,true);
