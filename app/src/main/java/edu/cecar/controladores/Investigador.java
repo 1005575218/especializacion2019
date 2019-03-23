@@ -22,51 +22,40 @@ public class Investigador {
     private String nombres;
     private String nacionalidad;
     private String sexo;
-    private boolean categorizado;
     private String lineaInvestigacion;
+    private boolean categorizado;
 
 
-
-
-    public Investigador(String nombres, String nacionalidad, String sexo, boolean categorizado) {
-
+    public Investigador(String nombres, String nacionalidad, String sexo, String lineaInvestigacion, boolean categorizado) {
         this.nombres = nombres;
         this.nacionalidad = nacionalidad;
         this.sexo = sexo;
-        this.categorizado = categorizado;
-
-    }
-
-    public Investigador(String lineaInvestigacion) {
         this.lineaInvestigacion = lineaInvestigacion;
+        this.categorizado = categorizado;
     }
 
     public String getNombres() {
-            return nombres;
+        return nombres;
     }
 
     public void setNombres(String nombres) {
-            this.nombres = nombres;
+        this.nombres = nombres;
     }
 
     public String getNacionalidad() {
-            return nacionalidad;
+        return nacionalidad;
     }
 
     public void setNacionalidad(String nacionalidad) {
-            this.nacionalidad = nacionalidad;
+        this.nacionalidad = nacionalidad;
     }
 
     public String getSexo() {
-            return sexo;
+        return sexo;
     }
 
     public void setSexo(String sexo) {
-            this.sexo = sexo;
-    }
-
-    public boolean isCategorizado() {
-        return categorizado;
+        this.sexo = sexo;
     }
 
     public String getLineaInvestigacion() {
@@ -77,5 +66,11 @@ public class Investigador {
         this.lineaInvestigacion = lineaInvestigacion;
     }
 
+    public boolean isCategorizado() {
+        return categorizado;
+    }
 
+    public void setCategorizado(boolean categorizado) {
+        this.categorizado = categorizado;
+    }
 }
