@@ -69,7 +69,7 @@ public class ExtraerDatoCVLAC {
 
         } catch (IOException e) {
 
-
+            //CAMBIO
 
         }
 
