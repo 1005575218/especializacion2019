@@ -5,7 +5,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ExtraerDatoCVLAC {
     private ExtraerDatoCVLAC() {
@@ -13,6 +12,7 @@ public class ExtraerDatoCVLAC {
 
     public static Investigador  getDatos(String url) {
         String elemento = null;
+        String elementoslineadeinvestigacion = null;
         Investigador investigador = null;
         int pivote =0;
 
@@ -45,9 +45,13 @@ public class ExtraerDatoCVLAC {
 
                }
             }
-            Element tablas2 = documentoHTML.select("table").get(pivote + 1); //Se obtiene la segunda tabla
-            Elements filasTabla2 = tablas2.select("tr");
-            System.out.println("   "+filasTabla2);
+            Element tablas2 = documentoHTML.select("table").get(pivote + 1); //Se obtiene la tabla de lineas de investigacion
+            Elements filasTabla2 = tablas2.select("li");
+            elementoslineadeinvestigacion = String.valueOf(filasTabla2.text());
+            System.err.println(""+ elementoslineadeinvestigacion);
+
+
+
 
 
 
