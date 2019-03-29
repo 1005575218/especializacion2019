@@ -48,7 +48,7 @@ public class ExtraerDatoCVLAC {
             Element tablas2 = documentoHTML.select("table").get(pivote + 1); //Se obtiene la tabla de lineas de investigacion
             Elements filasTabla2 = tablas2.select("li");
             elementoslineadeinvestigacion = String.valueOf(filasTabla2.text());
-            System.err.println(""+ elementoslineadeinvestigacion);
+            System.out.println(""+ elementoslineadeinvestigacion);
 
 
 
@@ -69,7 +69,7 @@ public class ExtraerDatoCVLAC {
 
         } catch (IOException e) {
 
-            e.printStackTrace();
+       
 
         }
 
