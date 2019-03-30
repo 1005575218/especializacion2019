@@ -47,11 +47,6 @@ public class ExtraerDatoCVLAC {
             }
             Element tablas2 = documentoHTML.select("table").get(pivote + 1); //Se obtiene la tabla de lineas de investigacion
             Elements filasTabla2 = tablas2.select("li");
-            elementoslineadeinvestigacion = String.valueOf(filasTabla2.text());
-            System.out.println(""+ elementoslineadeinvestigacion);
-
-
-
 
 
 
@@ -60,11 +55,7 @@ public class ExtraerDatoCVLAC {
             String nacionalidad = filasTabla.get(filaNacionalidad).select("td").get(1).text();
             String sexo = filasTabla.get(filaSexo).select("td").get(1).text();
             String tablalinea =elemento;
-
-
-
-
-            //Se crea el objeto investigador
+   //Se crea el objeto investigador
             investigador = new Investigador(nombre, nacionalidad,sexo,tablalinea,true);
 
         } catch (IOException e) {
